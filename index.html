@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 desde Cero - Guía Completa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon">🎨</span>
+                    <span class="logo-text">CSS3 desde Cero</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#que-es">¿Qué es?</a></li>
+                    <li><a href="#arquitectura">Arquitectura</a></li>
+                    <li><a href="#temas">Temas</a></li>
+                    <li><a href="#ejemplos">Ejemplos</a></li>
+                </ul>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>CSS3 desde Cero</h1>
+            <p class="hero-subtitle">Guía completa para aprender CSS3 desde fundamentos hasta conceptos avanzados.</p>
+            <div class="hero-buttons">
+                <a href="#que-es" class="btn btn-primary">Comenzar</a>
+                <a href="#ejemplos" class="btn btn-secondary">Ver ejemplos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Qué es CSS3? -->
+    <section id="que-es" class="section">
+        <div class="container">
+            <h2>¿Qué es CSS3?</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Lenguaje de Estilos</h3>
+                    <p>CSS3 es la tercera versión de Cascading Style Sheets, el lenguaje que define la presentación y diseño de documentos HTML.</p>
+                </div>
+                <div class="content-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Para Qué Sirve</h3>
+                    <p>Estilizar páginas web, crear layouts responsive, animaciones, transformaciones y efectos visuales avanzados.</p>
+                </div>
+                <div class="content-card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Características Principales</h3>
+                    <p>Flexbox, Grid, animaciones, transformaciones, media queries, variables CSS y diseño responsive.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>💡 ¿Sabías qué?</h4>
+                <p>CSS fue creado por Håkon Wium Lie en 1994. CSS3 no es una especificación única, sino un conjunto de módulos independientes que se desarrollan por separado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arquitectura -->
+    <section id="arquitectura" class="section section-alt">
+        <div class="container">
+            <h2>Arquitectura de CSS3</h2>
+            <p class="section-intro">CSS3 utiliza un sistema de cascada y especificidad para aplicar estilos a los elementos del DOM.</p>
+
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <h4>HTML (DOM)</h4>
+                    <p>Estructura del documento</p>
+                </div>
+                <div class="arch-arrow">⬇️</div>
+                <div class="arch-layer">
+                    <h4>Selectores CSS</h4>
+                    <p>Target de elementos</p>
+                </div>
+                <div class="arch-arrow">⬇️</div>
+                <div class="arch-layer">
+                    <h4>Cascada y Especificidad</h4>
+                    <p>Resolución de conflictos</p>
+                </div>
+                <div class="arch-arrow">⬇️</div>
+                <div class="arch-layer">
+                    <h4>Render Engine</h4>
+                    <p>Pintado en pantalla</p>
+                </div>
+            </div>
+
+            <div class="components-grid">
+                <div class="component-card">
+                    <h4>📊 Selectores</h4>
+                    <ul>
+                        <li>Elemento, clase, ID</li>
+                        <li>Atributos y pseudo-clases</li>
+                        <li>Pseudo-elementos</li>
+                        <li>Combinadores</li>
+                    </ul>
+                </div>
+                <div class="component-card">
+                    <h4>💾 Layout Moderno</h4>
+                    <ul>
+                        <li>Flexbox - Layout 1D</li>
+                        <li>CSS Grid - Layout 2D</li>
+                        <li>Position y display</li>
+                        <li>Box model avanzado</li>
+                    </ul>
+                </div>
+                <div class="component-card">
+                    <h4>🔒 Efectos Avanzados</h4>
+                    <ul>
+                        <li>Transformaciones 2D/3D</li>
+                        <li>Animaciones y transiciones</li>
+                        <li>Filtros y blend modes</li>
+                        <li>Variables CSS (custom properties)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temas -->
+    <section id="temas" class="section">
+        <div class="container">
+            <h2>Contenido del Curso</h2>
+            <div class="topics-grid">
+                <div class="topic-card" data-topic="1">
+                    <div class="topic-number">01</div>
+                    <h3>Introducción</h3>
+                    <p>Historia de CSS, evolución a CSS3 y configuración del entorno.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="2">
+                    <div class="topic-number">02</div>
+                    <h3>Instalación</h3>
+                    <p>Configuración de editores, preprocesadores y herramientas de desarrollo.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="3">
+                    <div class="topic-number">03</div>
+                    <h3>Conceptos básicos</h3>
+                    <p>Selectores, propiedades, valores, cascada y especificidad.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="4">
+                    <div class="topic-number">04</div>
+                    <h3>Ejemplos prácticos</h3>
+                    <p>Flexbox, Grid, layouts responsive y componentes modernos.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="5">
+                    <div class="topic-number">05</div>
+                    <h3>Buenas prácticas</h3>
+                    <p>Metodologías (BEM), organización de archivos y optimización.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="6">
+                    <div class="topic-number">06</div>
+                    <h3>Casos reales</h3>
+                    <p>Patrones de diseño, componentes reutilizables y sistemas de diseño.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="7">
+                    <div class="topic-number">07</div>
+                    <h3>Proyecto final</h3>
+                    <p>Desarrollo de un sitio web completo con CSS3 moderno.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ejemplos -->
+    <section id="ejemplos" class="section section-alt">
+        <div class="container">
+            <h2>Ejemplos de Código</h2>
+            <div class="examples-container">
+                <div class="example-card">
+                    <h4>Flexbox Layout</h4>
+                    <pre><code class="language-css">.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}</code></pre>
+                </div>
+                <div class="example-card">
+                    <h4>CSS Grid</h4>
+                    <pre><code class="language-css">.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+}</code></pre>
+                </div>
+                <div class="example-card">
+                    <h4>Animaciones</h4>
+                    <pre><code class="language-css">@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.element {
+    animation: fadeIn 0.5s ease;
+}</code></pre>
+                </div>
+                <div class="example-card">
+                    <h4>Variables CSS</h4>
+                    <pre><code class="language-css">:root {
+    --primary: #3498db;
+    --secondary: #2ecc71;
+}
+.btn {
+    background: var(--primary);
+    color: white;
+}</code></pre>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-primary">Ver más ejemplos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CSS3 desde Cero</h4>
+                    <p>Guía educativa completa para aprender CSS3 desde los fundamentos hasta conceptos avanzados.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#que-es">¿Qué es?</a></li>
+                        <li><a href="#temas">Temas</a></li>
+                        <li><a href="#ejemplos">Ejemplos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">MDN CSS</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>👨‍💻 Desarrollado por <strong>Isaac Esteban Haro Torres</strong></p>
+                <p class="developer-info">Ingeniero en Sistemas · Full Stack · Automatización · Data</p>
+                <div class="developer-contact">
+                    <p>📧 Email: <a href="mailto:zackharo1@gmail.com">zackharo1@gmail.com</a></p>
+                    <p>💻 GitHub: <a href="https://github.com/ieharo1" target="_blank">github.com/ieharo1</a></p>
+                </div>
+                <p class="copyright">© 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
