@@ -45,6 +45,12 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const targetId = this.getAttribute('href');
 
+            // Si es un enlace a un tema, mostrar el contenido
+            if (targetId.startsWith('#tema')) {
+                showTopicContent(targetId);
+                return;
+            }
+
             if (targetId === '#') return;
 
             const targetElement = document.querySelector(targetId);
@@ -60,6 +66,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
+    });
+
+    // Función para mostrar contenido de tema
+    function showTopicContent(topicId) {
+        const content = document.getElementById(topicId);
+        if (content) {
+            // Ocultar todos los contenidos
+            document.querySelectorAll('.content-detail').forEach(el => {
+                el.style.display = 'none';
+            });
+
+            // Mostrar el contenido seleccionado
+            content.style.display = 'block';
+
+            // Scroll suave al contenido
+            setTimeout(() => {
+                content.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        }
+    }
+
+    // Ocultar todos los content-detail al cargar
+    document.querySelectorAll('.content-detail').forEach(el => {
+        el.style.display = 'none';
     });
 
     // Efecto de scroll en el header

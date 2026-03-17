@@ -605,3 +605,259 @@ body {
 .language-css .function {
     color: #dcdcaa;
 }
+
+/* ============================================
+   Topic Navigation Styles
+   ============================================ */
+
+/* Topics Section */
+.topics {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.topics-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.topic-card {
+    background: var(--white);
+    border: 2px solid #eee;
+    border-radius: 15px;
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.topic-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 40px rgba(38, 77, 228, 0.15);
+    transform: translateY(-5px);
+}
+
+.topic-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+.topic-icon {
+    font-size: 2rem;
+}
+
+.topic-header h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+.topic-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.topic-list li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.topic-list li:last-child {
+    border-bottom: none;
+}
+
+.topic-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: block;
+    padding: 0.3rem 0;
+}
+
+.topic-list a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.btn-topic {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-topic:hover {
+    background: var(--primary-dark);
+    transform: translateX(5px);
+}
+
+/* Topic Content */
+.topic-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-detail {
+    background: var(--white);
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    scroll-margin-top: 100px;
+}
+
+.content-detail h3 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.content-detail h4 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+}
+
+.content-body p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.content-body ul, .content-body ol {
+    margin: 1rem 0 1rem 2rem;
+    line-height: 1.8;
+}
+
+.content-body li {
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.content-body pre {
+    background: var(--dark-bg);
+    color: #f8f8f2;
+    padding: 1.5rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.content-body code {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.9rem;
+}
+
+.content-body a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.content-body a:hover {
+    text-decoration: underline;
+}
+
+/* Info Table */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.info-table th, .info-table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+.info-table th {
+    background: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.info-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.info-table tr:hover {
+    background: #e8f0fd;
+}
+
+/* Info Box */
+.info-box {
+    background: linear-gradient(135deg, #e8f0fd 0%, #fff8e6 100%);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 0 10px 10px 0;
+    margin: 2rem 0;
+}
+
+.info-box strong {
+    color: var(--secondary-color);
+}
+
+/* Back Button */
+.btn-back {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background: var(--light-bg);
+    color: var(--secondary-color);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid #eee;
+}
+
+.btn-back:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* Responsive for Topics */
+@media (max-width: 768px) {
+    .topics {
+        padding: 60px 0;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-detail {
+        padding: 1.5rem;
+    }
+
+    .content-detail h3 {
+        font-size: 1.5rem;
+    }
+
+    .info-table {
+        font-size: 0.85rem;
+    }
+
+    .info-table th, .info-table td {
+        padding: 0.5rem;
+    }
+}
